@@ -6,7 +6,7 @@ y2=input('upisite y koordinatu druge tocke')
 if iter(x1)!=float or iter(y1)!=float or iter(x2)!=float or iter(y2)!=float:
     print('ponovite upis')
 
-k=((y2-y1)/(x2-x1))
-l=y1-k*x1
+k=(float(y2)-float(y1))/(float(x2)-float(x1))
+l=float(y1)-k*float(x1)
 
 print('y=', k, 'x+',l )
