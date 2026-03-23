@@ -24,7 +24,7 @@ print(c.pravokutna(fkub, 1,4,100))
 print(c.trapezna(fkub, 1, 4, 100))
 
 x=np.linspace(-2, 2, 100)
-l1=c.tocke(fkub, -2, 2, 0.5)
+l1=c.tocke(fkub, -2, 2, 0.5)  #iznos derivacija od -2 do 2, h=0.5, c.tocke ce nam dati dvije liste, u jednoj su brojevi, u drugoj su vrijednosti derivacija za njih
 l2=c.tocke(fkub, -2, 2, 0.0001)
 l3=c.tocke(fkub, -2, 2, 0.01)
 

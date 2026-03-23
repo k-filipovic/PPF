@@ -33,6 +33,3 @@ def trapezna(f, a, b, n):
         s+=f(a+dx*i)+f(a+dx*(i+1))
     return round(s*dx/2, 4)
 
-
-
-    

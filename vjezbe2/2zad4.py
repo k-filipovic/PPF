@@ -6,17 +6,17 @@ import matplotlib.pyplot as plt
 def f(x):
     return 2*x**2+3
 
-print('gornja i donja integralna suma su: ', c.pravokutna(f, 0, 1, 100))
+print('gornja i donja integralna suma su: ', c.pravokutna(f, 0, 1, 100))  
 print('integral pomoću trapeza ', c.trapezna(f, 0, 1, 100))
 
-n=np.arange(50, 501, 20)
-x=np.linspace(50, 501, 200)
-y=np.linspace(11/3, 11/3, 200)
-n=n.tolist()
-trapezni=[]
-pgornji=[]
-pdonji=[]
-for i in n:
+n=np.arange(50, 501, 20)    #stvaramo arange za n podjela koji će biti na x osi
+x=np.linspace(50, 501, 200)     #ovo nam treba samo za crtanje pravca analitičkog integrala
+y=np.linspace(11/3, 11/3, 200)  #ovo je vrijednost integrala kojeg sam odabrala
+n=n.tolist()    #stavljam n-ove u listu
+trapezni=[] #lista sa vrijednostima trapeznog integrala
+pgornji=[]  #pravokutni gornji
+pdonji=[]   #pravokutni donji 
+for i in n:     #petlja za listu trapeznih
     k=c.trapezna(f, 0, 1, i)
     trapezni.append(k)
 for j in n:

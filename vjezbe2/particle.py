@@ -32,9 +32,9 @@ class particle:
     
     def plot_trajectory(self):
         import matplotlib.pyplot as plt
-        plt.xlabel('x')
-        plt.ylabel('y')
-        plt.title('Gibanje cestice')
+        plt.xlabel('x/m')
+        plt.ylabel('y/m')
+        plt.title('Gibanje čestice')
         plt.plot(self.x_list, self.y_list)
         return plt.show()
 
