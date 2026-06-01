@@ -13,20 +13,36 @@ def histogram(podaci, k):
         rub= x_min + i*h
         rubovi.append(rub)
 
-    k={         #stvaram dictionary
+    rj={         #stvaram dictionary
 
         } 
     
-    for i in range(len(rubovi)):
+    for i in range(len(rubovi)-1):
+        vrijednost=0
         for j in podaci:
-            if j>=rubovi[i] and j<rubovi[i+1]:
-                kljuc=str(rubovi[i])+' - '+ str(rubovi[i+1])
-                vrijednost=j
-                k[kljuc]=vrijednost
-    print(k)
+            if j>=rubovi[i] and j<=rubovi[i+1]:
+                kljuc=str(round(rubovi[i], 4))+' - '+ str(round(rubovi[i+1], 4))
+                vrijednost+=1
+                rj[kljuc]=vrijednost
+    return rj
         
 
-histogram(mase_ciste, 10)
+#crtanje grafa
+import matplotlib.pyplot as plt
+
+def graf(rjecnik):
+    intervali= list(rjecnik.keys())
+    frekvencije= list(rjecnik.values())
+    plt.figure(figsize=(12, 6))
+    plt.bar(intervali, frekvencije, color='lightblue', edgecolor='black', width=0.6)
+    plt.xlabel('Razredi (Intervali masa)')
+    plt.ylabel('Frekvencija (Broj podataka)')
+    plt.title('Histogram masa')
+    plt.xticks(rotation=45)
+    plt.tight_layout()
 
 
-    
+if __name__ == "__main__":      #ovime sam samo osigurala da mogu zad1 upotrijebit kao modul jer se onda ne izvrsava ovaj dio zadatka
+    rjecnik= histogram(mase_ciste, 10)
+    graf(rjecnik)
+    plt.show()
