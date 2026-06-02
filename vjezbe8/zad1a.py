@@ -52,7 +52,7 @@ plt.show()
 print('a=', koef_a)
 print('b=', koef_b)
 
-def standardna_pogreska(x, y, a, b):
+def standardna_pogreska(x, y, a, b):    #formula za sigumu, AI
     s=0
     for i in range(len(x)):
         s+=(y[i]-(a*x[i])-b)**2
