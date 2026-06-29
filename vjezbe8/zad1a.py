@@ -15,7 +15,7 @@ def logaritmi(lista):
         x=math.log(i, 10)   #logaritam po bazi 10
         nova.append(x)
     return nova
-
+#h_log=np.log10(h)
 h_log=logaritmi(h)      #y
 t_log=logaritmi(t_mean) #x
 

@@ -26,7 +26,7 @@ def histogram(podaci, k):
                 rj[kljuc]=vrijednost
     return rj
         
-
+print(histogram(mase_ciste, 10))
 #crtanje grafa
 import matplotlib.pyplot as plt
 

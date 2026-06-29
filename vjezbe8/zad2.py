@@ -32,8 +32,10 @@ x_rad= np.radians(x)
 
 #lijevi graf, L=120mm
 teorijski_T_120 = period(x_rad, l_120)
+T1= period(x_rad, 0.120)
 ax1.scatter(kut_deg, T_120, color='red', label='Mjerenja (120 mm)')
 ax1.plot(x, teorijski_T_120, color='blue', label='Teorijski model')
+ax1.plot(x, T1, color='blue', label='Idealni model')
 ax1.set_title('Njihalo L = 120 mm')
 ax1.set_xlabel('Kut otklona (stupnjevi)')
 ax1.set_ylabel('Period T(s)')
@@ -42,8 +44,10 @@ ax1.legend()
 
 #desni graf, L=240mm
 teorijski_T_240 = period(x_rad, l_240)
+T2= period(x_rad, 0.120)
 ax2.scatter(kut_deg, T_240, color='orange', label='Mjerenja (240 mm)')
 ax2.plot(x, teorijski_T_240, color='green', label='Teorijski model')
+ax2.plot(x, T2, color='green', label='Teorijski model')
 ax2.set_title('Njihalo L = 240 mm')
 ax2.set_xlabel('Kut otklona (stupnjevi)')
 ax2.set_ylabel('Period T(s)')

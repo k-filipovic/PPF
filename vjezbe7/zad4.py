@@ -13,7 +13,7 @@ print('Razlika sredine i medijana:', sr_mase-med_mase)
 
 std_mase = np.std(mase_array)   #gledamo standardnu devijaciju
 mase_nova=[]
-for i in mase:
+for i in mase:                              #linija potpomognuta AI-em
     if abs(i-sr_mase) < (2*std_mase):       #podaci koji od sredine odstupaju za manje od 2 standardne devijacije, matematicki dogovor
         mase_nova.append(i)
 

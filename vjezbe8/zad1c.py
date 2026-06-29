@@ -16,7 +16,7 @@ def t_kv(t):
         nova.append(i**2)
     return nova
 
-t_kvadrat=t_kv(t_mean)
+t_kvadrat=t_kv(t_mean)    #lista sa t**2
 
 def a(x, y):
     s1=0
